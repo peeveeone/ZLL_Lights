@@ -476,7 +476,7 @@
       <InputClusters Cluster="Commission" RxAPDU="Light_DimmableLight->apduZCL" Discoverable="true"/>
       <OutputClusters Cluster="Commission" TxAPDUs="Light_DimmableLight->apduZCL" Discoverable="true"/>
     </Endpoints>
-    <Endpoints Id="10" Enabled="true" ApplicationDeviceId="256" ApplicationDeviceVersion="2" Profile="Light_Link" Message="APP_msgZpsEvents_ZCL" Name="LIGHT">
+    <Endpoints Id="10" Enabled="true" ApplicationDeviceId="256" ApplicationDeviceVersion="2" Profile="Light_Link" Message="APP_msgZpsEvents_ZCL" Name="LIGHT_00">
       <InputClusters Cluster="Basic" RxAPDU="Light_DimmableLight->apduZCL" Discoverable="true"/>
       <InputClusters Cluster="Groups" RxAPDU="Light_DimmableLight->apduZCL" Discoverable="true"/>
       <InputClusters Cluster="Identify" RxAPDU="Light_DimmableLight->apduZCL" Discoverable="true"/>
@@ -694,7 +694,7 @@
       <InputClusters Cluster="Commission" RxAPDU="Light_ColorLight->apduZCL" Discoverable="true"/>
       <OutputClusters Cluster="Commission" TxAPDUs="Light_ColorLight->apduZCL" Discoverable="true"/>
     </Endpoints>
-    <Endpoints Id="10" Enabled="true" ApplicationDeviceId="512" ApplicationDeviceVersion="2" Profile="Light_Link" Message="APP_msgZpsEvents_ZCL" Name="LIGHT">
+    <Endpoints Id="10" Enabled="true" ApplicationDeviceId="512" ApplicationDeviceVersion="2" Profile="Light_Link" Message="APP_msgZpsEvents_ZCL" Name="LIGHT_00">
       <InputClusters Cluster="Basic" RxAPDU="Light_ColorLight->apduZCL" Discoverable="true"/>
       <InputClusters Cluster="Groups" RxAPDU="Light_ColorLight->apduZCL" Discoverable="true"/>
       <InputClusters Cluster="Identify" RxAPDU="Light_ColorLight->apduZCL" Discoverable="true"/>

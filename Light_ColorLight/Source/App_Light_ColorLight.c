@@ -75,7 +75,7 @@ tsCLD_ZllDeviceTable sDeviceTable = { ZLL_NUMBER_DEVICES,
                                           { 0,
                                             ZLL_PROFILE_ID,
                                             COLOUR_LIGHT_DEVICE_ID,
-                                            LIGHT_COLORLIGHT_LIGHT_ENDPOINT,
+                                            LIGHT_COLORLIGHT_LIGHT_00_ENDPOINT,
                                             2,
                                             0,
                                             0}
@@ -131,7 +131,7 @@ PUBLIC teZCL_Status eApp_ZLL_RegisterEndpoint(tfpZCL_ZCLCallBackFunction fptr,
                                     fptr,
                                     psCommissionEndpoint);
 
-    return eZLL_RegisterColourLightEndPoint(LIGHT_COLORLIGHT_LIGHT_ENDPOINT,
+    return eZLL_RegisterColourLightEndPoint(LIGHT_COLORLIGHT_LIGHT_00_ENDPOINT,
                                             fptr,
                                             &sLight);
 }
@@ -153,7 +153,7 @@ PUBLIC teZCL_Status eApp_ZLL_RegisterEndpoint(tfpZCL_ZCLCallBackFunction fptr,
 ****************************************************************************/
 PRIVATE void vOverideProfileId(uint16* pu16Profile, uint8 u8Ep)
 {
-    if (u8Ep == LIGHT_COLORLIGHT_LIGHT_ENDPOINT)
+    if (u8Ep == LIGHT_COLORLIGHT_LIGHT_00_ENDPOINT)
     {
         *pu16Profile = 0x0104;
     }
@@ -178,7 +178,7 @@ PRIVATE void vOverideProfileId(uint16* pu16Profile, uint8 u8Ep)
  ****************************************************************************/
 PUBLIC void vApp_eCLD_ColourControl_GetRGB(uint8 *pu8Red,uint8 *pu8Green,uint8 *pu8Blue)
 {
-    eCLD_ColourControl_GetRGB(LIGHT_COLORLIGHT_LIGHT_ENDPOINT,
+    eCLD_ColourControl_GetRGB(LIGHT_COLORLIGHT_LIGHT_00_ENDPOINT,
                               pu8Red,
                               pu8Green,
                               pu8Blue);
@@ -275,7 +275,7 @@ PUBLIC void APP_vHandleIdentify(uint16 u16Time) {
  ****************************************************************************/
 PUBLIC void vIdEffectTick(uint8 u8Endpoint) {
 
-    if (u8Endpoint != LIGHT_COLORLIGHT_LIGHT_ENDPOINT) {
+    if (u8Endpoint != LIGHT_COLORLIGHT_LIGHT_00_ENDPOINT) {
         return;
     }
 
@@ -380,7 +380,7 @@ PUBLIC void vStartEffect(uint8 u8Effect) {
             sIdEffect.bFinish = FALSE;
             sIdEffect.u8Level = 0;
             sIdEffect.u8Count = 15;
-            eCLD_ColourControl_GetRGB( LIGHT_COLORLIGHT_LIGHT_ENDPOINT, &sIdEffect.u8Red, &sIdEffect.u8Green, &sIdEffect.u8Blue);
+            eCLD_ColourControl_GetRGB( LIGHT_COLORLIGHT_LIGHT_00_ENDPOINT, &sIdEffect.u8Red, &sIdEffect.u8Green, &sIdEffect.u8Blue);
             APP_ZCL_vSetIdentifyTime(17);
             sIdEffect.u8Tick = 200;
             break;

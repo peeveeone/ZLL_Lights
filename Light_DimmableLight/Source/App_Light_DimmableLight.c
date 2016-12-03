@@ -72,7 +72,7 @@ tsCLD_ZllDeviceTable sDeviceTable = { ZLL_NUMBER_DEVICES,
                                           { 0,
                                             ZLL_PROFILE_ID,
                                             DIMMABLE_LIGHT_DEVICE_ID,
-                                            LIGHT_DIMMABLELIGHT_LIGHT_ENDPOINT,
+                                            LIGHT_DIMMABLELIGHT_LIGHT_00_ENDPOINT,
                                             2,
                                             0,
                                             0}
@@ -110,7 +110,7 @@ PUBLIC teZCL_Status eApp_ZLL_RegisterEndpoint(tfpZCL_ZCLCallBackFunction fptr,
                                     fptr,
                                     psCommissionEndpoint);
 
-    return eZLL_RegisterDimmableLightEndPoint(LIGHT_DIMMABLELIGHT_LIGHT_ENDPOINT,
+    return eZLL_RegisterDimmableLightEndPoint(LIGHT_DIMMABLELIGHT_LIGHT_00_ENDPOINT,
                                               fptr,
                                               &sLight);
 }
@@ -132,7 +132,7 @@ PUBLIC teZCL_Status eApp_ZLL_RegisterEndpoint(tfpZCL_ZCLCallBackFunction fptr,
 ****************************************************************************/
 PRIVATE void vOverideProfileId(uint16* pu16Profile, uint8 u8Ep)
 {
-    if (u8Ep == LIGHT_DIMMABLELIGHT_LIGHT_ENDPOINT)
+    if (u8Ep == LIGHT_DIMMABLELIGHT_LIGHT_00_ENDPOINT)
     {
         *pu16Profile = 0x0104;
     }
@@ -151,7 +151,7 @@ PRIVATE void vOverideProfileId(uint16* pu16Profile, uint8 u8Ep)
  ****************************************************************************/
 PUBLIC uint8 u8AppGetEPId(void)
 {
-	return LIGHT_DIMMABLELIGHT_LIGHT_ENDPOINT;
+	return LIGHT_DIMMABLELIGHT_LIGHT_00_ENDPOINT;
 }
 
 /****************************************************************************
@@ -233,7 +233,7 @@ static bool bActive = FALSE;
  ****************************************************************************/
 PUBLIC void vIdEffectTick(uint8 u8Endpoint) {
 
-    if (u8Endpoint != LIGHT_DIMMABLELIGHT_LIGHT_ENDPOINT) {
+    if (u8Endpoint != LIGHT_DIMMABLELIGHT_LIGHT_00_ENDPOINT) {
         return;
     }
 
