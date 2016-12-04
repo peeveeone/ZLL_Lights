@@ -66,7 +66,7 @@ PUBLIC void vLoadScenesNVM(void);
 #define ZLL_NO_APS_ACK
 
 /* Sets the number of endpoints that will be created by the ZCL library */
-#define ZLL_NUMBER_OF_ENDPOINTS                             2
+#define ZLL_NUMBER_OF_ENDPOINTS                             10
 #define ZLL_NUMBER_DEVICES                                  1
 
 #define ZLL_MANUFACTURER_CODE                                0x1037
