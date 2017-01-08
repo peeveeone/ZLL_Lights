@@ -576,8 +576,8 @@ OS_TASK(APP_ZPR_Light_Task)
             PDM_eSaveRecordData(PDM_ID_APP_ZLL_ROUTER,&sZllState,sizeof(tsZllState));
             DBG_vPrintf(TRACE_CLASSIC, "Joined as Router\n");
             /* identify to signal the join */
-            APP_ZCL_vSetIdentifyTime( 10);
-            APP_vHandleIdentify( 10);
+         //   APP_ZCL_vSetIdentifyTime( 10);
+        //    APP_vHandleIdentify( 10);
         }
         break;
 
